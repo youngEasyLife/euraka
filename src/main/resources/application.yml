@@ -1,0 +1,15 @@
+server:
+  port:  8881
+
+  #域名
+eureka:
+  instance:
+    hostname: localhost
+
+  #禁用 Eureka的客户端注册行为
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+  #eureka注册中心服务地址
+  service-url.defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
